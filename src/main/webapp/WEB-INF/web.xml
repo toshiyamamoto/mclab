@@ -8,7 +8,7 @@
   <security-constraint id="SecurityConstraint_1">
      <web-resource-collection id="WebResourceCollection_1">
         <web-resource-name>Protected with allRole</web-resource-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/protected.html</url-pattern>
         <http-method>GET</http-method>
         <http-method>POST</http-method>
      </web-resource-collection>
@@ -16,6 +16,18 @@
         <role-name>allRole</role-name>       
      </auth-constraint>
   </security-constraint>
+  <security-constraint id="SecurityConstraint_2">
+     <web-resource-collection id="WebResourceCollection_2">
+        <web-resource-name>Protected with allRole</web-resource-name>
+        <url-pattern>*</url-pattern>
+        <http-method>GET</http-method>
+        <http-method>POST</http-method>
+     </web-resource-collection>
+     <auth-constraint id="AuthConstraint_2">
+        <role-name>Everyone</role-name>       
+     </auth-constraint>
+  </security-constraint>
+
 
   <login-config>
   	<auth-method>FORM</auth-method>
@@ -30,4 +42,9 @@
     <description>all role</description>
     <role-name>allRole</role-name>
   </security-role>       
+   <security-role id="SecurityRole_2">
+     <description>Everyone role</description>
+     <role-name>Everyone</role-name>
+  </security-role>    
+
 </web-app>
