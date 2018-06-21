@@ -24,7 +24,7 @@
 
   <webApplication name="mclab" location="${app.location}">
     <application-bnd>
-      <security-role name="allrole">
+      <security-role name="allRole">
         <user name="user1"/>
       </security-role>
       <security-role name="Everyone">
